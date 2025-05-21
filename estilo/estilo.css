@@ -1,157 +1,159 @@
 * {
     font-family: sans-serif;
+    box-sizing: border-box;
 }
 
-/* Estilos para o corpo da página */
 body {
-    /* Define a imagem de fundo */
-    background-image: url('../img/Background.png');
-    /* Faz a imagem cobrir toda a área da tela */
+    background-image: url("../img/Background.png");
     background-size: cover;
-    padding: 0%;
-    /* Remove qualquer espaçamento interno */
-    margin: 0%;
-    /* Remove qualquer margem externa */
+    margin: 0;
+    padding: 0;
     display: flex;
-    /* Usa o modelo de layout flexbox */
     flex-direction: column;
-    /* Organiza os elementos na direção vertical */
     justify-content: center;
-    /* Alinha os elementos verticalmente ao centro */
     align-items: center;
-    /* Alinha os elementos horizontalmente ao centro */
     height: 100vh;
-    /* Define a altura como 100% da altura da janela de visualização */
-    color: #F0F5F9;
-    /* Define a cor do texto */
+    color: #f0f5f9;
 }
 
-/* Estilos para o container de usuário */
-.usuario {
-    background: rgba(0, 0, 0, 0);
-    /* Define a cor de fundo da parte do usuário */
-    width: 300px;
-    /* Define a largura do container */
-    height: 400px;
-    /* Define a altura do container */
-    border: 2px solid #C9D6DF;
-    /* Define uma borda sólida e a cor */
+.registro {
+    background: rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(4px);
+    border: 2px solid #c9d6df;
     border-radius: 10px;
-    /* Deixa os cantos arredondados */
-    padding: 30px 40px;
-    /* Define o preenchimento interno, 30px em cima e embaixo e 40px nas laterais */
-    backdrop-filter: blur(2px);
-    /* Aplica um efeito de desfoque no fundo */
-    position: relative;
-    /* Define o posicionamento relativo para elementos dentro dele */
+    padding: 40px;
+    width: 100%;
+    max-width: 600px;
     box-shadow: 9px 7px 7px -1px rgba(0, 0, 0, 0.35);
 }
 
-/* Estilos para a área de cadastro */
-.cadastro {
+.cadastro-cliente {
     width: 100%;
-    /* Define a largura como 100% do container pai */
     height: 100%;
-    /* Define a altura como 100% do container pai */
+    background: transparent;
 }
 
 .titulo {
-    font-size: 20px;
-    margin: 5px auto 10px;
-    color: #1E2022;
+    font-size: 30px;
+    margin-bottom: 10px;
+    color: #1e2022;
     font-weight: bold;
+    text-align: start;
+    border-bottom: solid 1px #c9d6df;
 }
 
 .subtitulo {
-    font-size: 15px;
-    margin: 3px auto 10px;
+    font-size: 16px;
+    margin-bottom: 20px;
     font-weight: bold;
+    text-align: start;
 }
 
-/* Estilos para o formulário de entrada */
 .inputs form {
-    display: grid;
-    /* Usa o modelo de layout de grade (grid) */
-    grid-template-columns: 1fr 1fr;
-    /* Cria 2 colunas de tamanho igual */
-    gap: 10px;
-    /* Define o espaçamento entre as colunas */
-    padding: 0px;
-    /* Remove o preenchimento interno */
-    width: 100%;
-    /* Define a largura como 100% do container pai */
-    max-width: 600px;
-    /* Define a largura máxima do formulário */
-    margin: auto;
-    /* Centraliza o formulário horizontalmente */
-    border-radius: 10px;
-    /* Arredonda os cantos */
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
 }
 
-/* Estilos para os campos dentro do formulário */
 .campo {
+    flex: 1 1 calc(50% - 20px);
     display: flex;
-    /* Organiza os itens no layout flexível */
+    flex-direction: column;
+}
+
+.inputs input {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-bottom: 1px solid #c9d6df;
+    background: transparent;
+    color: #c9d6df;
+    font-size: 14px;
 }
 
 .inputs input::placeholder {
-    color: #F0F5F9;
-    /* Mesma cor do texto para manter o estilo */
-    opacity: 0.7;
-    /* Opcional: deixa o placeholder um pouco mais transparente */
-}
-
-/* Estilos para os inputs dentro da classe .inputs */
-.inputs input {
-    width: 100%;
-    padding: 10px;
-    border: none;
-    /* Remove todas as bordas */
-    border-bottom: 1px solid #C9D6DF;
-    /* Adiciona apenas a borda inferior */
-    border-radius: 0;
-    /* Garante que não haja cantos arredondados */
-    background: transparent;
-    /* Mantém o fundo transparente */
-    color: #C9D6DF;
-    font-size: 12px;
-
+  color: #f0f5f9;
+  opacity: 0.7;
 }
 
 .inputs input:focus {
-    outline: none;
-    /* Remove o contorno padrão */
-    border-bottom: 2px solid #C9D6DF;
-    /* Muda a cor da borda inferior quando focado */
+  outline: none;
+  border-bottom: 2px solid #c9d6df;
 }
 
-/* Estilos para o botão de envio dentro do formulário */
 .inputs button {
-    grid-column: span 2;
-    /* O botão ocupa as duas colunas da grade */
-    width: 100%;
-    /* Define a largura como 100% do container */
-    padding: 15px;
-    /* Define o preenchimento interno */
-    background: #1E2022;
-    /* Define a cor de fundo do botão */
-    color: #C9D6DF;
-    /* Define a cor do texto do botão */
-    border: none;
-    /* Remove a borda do botão */
-    border-radius: 5px;
-    /* Deixa os cantos do botão arredondados */
-    cursor: pointer;
-    /* Altera o cursor para uma mãozinha ao passar sobre o botão */
-    font-size: 16px;
-    /* Define o tamanho da fonte */
-    font-weight: bold;
-    /* Define o peso da fonte como negrito */
-    box-shadow: 9px 7px 7px -1px rgba(0, 0, 0, 0.35);
+  flex: 1 1 100%;
+  padding: 14px;
+  background: #1e2022;
+  color: #c9d6df;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  margin-top: 10px;
+  box-shadow: 9px 7px 7px -1px rgba(0, 0, 0, 0.35);
+  transition: background 0.3s;
 }
 
-/* Estilos para o botão quando o mouse passa sobre ele */
 .inputs button:hover {
-    background: #282b2e;
-    /* Muda a cor de fundo do botão quando passa o mouse */
+  background: #282b2e;
+}
+
+.input-floating {
+  position: relative;
+  width: 100%;
+  margin-top: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  /* Garante que ocupe metade da linha como os outros campos */
+  flex: 1 1 calc(50% - 20px);
+  box-sizing: border-box;
+}
+
+.input-floating input {
+  width: 100%;
+  padding: 14px 10px 10px 10px; /* padding igual dos dois lados */
+  border: none;
+  border-bottom: 1px solid #c9d6df;
+  background: transparent;
+  color: #c9d6df;
+  font-size: 14px;
+  box-sizing: border-box;
+}
+
+.input-floating input:focus {
+  outline: none;
+  border-bottom: 2px solid #c9d6df;
+}
+
+.input-floating label {
+  position: absolute;
+  top: 14px;
+  left: 10px;
+  font-size: 14px;
+  color: #c9d6df;
+  pointer-events: none;
+  transition: all 0.2s ease-out;
+  background: transparent;
+  padding: 0 4px;
+}
+
+.input-floating input:focus + label,
+.input-floating input:not(:placeholder-shown) + label,
+.input-floating input:valid + label {
+  top: -8px;
+  left: 5px;
+  font-size: 12px;
+  border-bottom: solid 1px #c9d6df;
+  padding: 0 4px;
+}
+
+.erro {
+  color: red;
+  margin-left: 4px;
+  font-weight: bold;
+  display: none; /* mostrar somente quando houver erro */
 }

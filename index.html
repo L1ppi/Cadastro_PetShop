@@ -17,51 +17,97 @@
             <p class="titulo">Cadastro de Cliente</p>
             <p class="subtitulo">Preencha os campos abaixo:</p>
             <div class="inputs">
-                <form action="#">
-                    <!-- CAMPO DO NOME CLIENTE -->
-                    <div class="campo">
-                        <input type="text" name="cliente" placeholder="Nome do Cliente" required>
-                    </div>
-                    <!--CAMPO CEP CLIENTE -->
-                    <div class="campo">
-                        <input type="text" name="cep" id="cep" placeholder="CEP" maxlength="9">
-                        <span id="cepErro" style="color: red; display: none;">*</span>
-                    </div>
-                    <!-- CAMPO DO CPF CLIENTE -->
-                    <div class="campo">
-                        <input type="text" name="cpf" id="cpf" placeholder="CPF: 999.999.999-99" required>
-                        <span id="cpfErro" style="color: red; display: none;">*</span>
-                    </div>
-                    <!-- CAMPO DA RUA CLIENTE -->
-                    <div class="campo">
-                        <input type="text" name="rua" id="rua" placeholder="Rua" readonly>
-                    </div>
-
-                    <div class="campo"><input type="text" name="telefone" placeholder="TEL: (99) 99999-9999" required>
-                    </div>
-
-                    <div class="campo">
-                        <input type="text" id="bairro" placeholder="Bairro" readonly>
-                    </div>
-                    <div class="campo"><input type="password" id="senha" name="senha2" placeholder="Digite uma senha"
-                            required></div>
-                    <div class="campo">
-                        <input type="text" id="numero" placeholder="Número">
-                    </div>
-                    <div class="campo">
-                        <input type="password" id="senha2" name="senha2" placeholder="Confirme sua senha" required>
-                        <span id="senhaErro" style="color: red; display: none;">*</span>
-                    </div>
-                    <div class="campo"><input type="text" name="endereco4" placeholder="Complemento"></div>
-                    <button type="submit">Salvar</button>
-                </form>
+    <form action="#">
+        <!-- NOME CLIENTE -->
+        <div class="campo">
+            <div class="input-floating">
+                <input type="text" name="cliente" id="cliente">
+                <label for="cliente">Nome do Cliente</label>
             </div>
         </div>
-        <div class="cadastro-pet">
 
+        <!-- CEP CLIENTE -->
+        <div class="campo">
+            <div class="input-floating">
+                <input type="text" name="cep" id="cep" required>
+                <label for="cep">CEP <span id="cepErro" class="erro">*</span></label>
+            </div>
+        </div>
+
+        <!-- CPF CLIENTE -->
+        <div class="campo">
+            <div class="input-floating">
+                <input type="text" name="cpf" id="cpf" required>
+                <label for="cpf">CPF: 999.999.999-99 <span id="cpfErro" class="erro">*</span></label>
+            </div>
+        </div>
+
+        <!-- RUA CLIENTE -->
+        <div class="campo">
+            <div class="input-floating">
+                <input type="text" name="rua" id="rua" readonly>
+                <label for="rua">Rua</label>
+            </div>
+        </div>
+
+        <!-- TELEFONE CLIENTE -->
+        <div class="campo">
+            <div class="input-floating">
+                <input type="text" name="telefone" id="telefone" required>
+                <label for="telefone">TEL: (99) 99999-9999</label>
+            </div>
+        </div>
+
+        <!-- BAIRRO CLIENTE -->
+        <div class="campo">
+            <div class="input-floating">
+                <input type="text" name="bairro" id="bairro" readonly>
+                <label for="bairro">Bairro</label>
+            </div>
+        </div>
+
+        <!-- SENHA -->
+        <div class="campo">
+            <div class="input-floating">
+                <input type="password" id="senha" name="senha2" required>
+                <label for="senha">Digite uma senha</label>
+            </div>
+        </div>
+
+        <!-- NÚMERO -->
+        <div class="campo">
+            <div class="input-floating">
+                <input type="text" id="numero" name="numero">
+                <label for="numero">Número</label>
+            </div>
+        </div>
+
+        <!-- CONFIRME SENHA -->
+        <div class="campo">
+            <div class="input-floating">
+                <input type="password" id="senha2" name="senha2" required>
+                <label for="senha2">Confirme sua senha <span id="senhaErro" class="erro">*</span></label>
+            </div>
+        </div>
+
+        <!-- COMPLEMENTO -->
+        <div class="campo">
+            <div class="input-floating">
+                <input type="text" name="endereco4" id="endereco4">
+                <label for="endereco4">Complemento</label>
+            </div>
+        </div>
+
+        <button type="submit">Salvar</button>
+    </form>
+</div>
 
         </div>
+
+
     </div>
+    </div>
+    <script src="sript.js"></script>
 </body>
 
 </html>

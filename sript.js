@@ -11,6 +11,8 @@ function buscarEndereco() {
   let cepErro = document.getElementById("cepErro");
   let cep = cepInput.value.replace(/\D/g, "");
 
+  cepErro.style.display = "inline"; // Mostra o erro ao iniciar a busca
+
   if (cep.length === 8) {
     fetch(`https://viacep.com.br/ws/${cep}/json/`)
       .then((response) => response.json())
