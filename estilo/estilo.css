@@ -1,30 +1,102 @@
 * {
-    font-family: sans-serif;
-    box-sizing: border-box;
+  font-family: "DynaPuff", system-ui;
+  background: var(--second-color);
 }
-/* Variáveis CSS para reutilização */
 :root {
-  --background-color:#537D5D;
-  --second-color: #73946B;
-  --third-color:#9EBC8A;
-  --fourth-color:#D2D0A0;
+  --first-color: #537d5d;
+  --second-color: #73946b;
+  --third-color: #9ebc8a;
+  --fourth-color: #d2d0a0;
   --error-color: red;
 }
-
-body {
-    background:var(--background-color);
-    margin: 0;
-    padding: 0;
-    display: flex;
-    height: 100vh;
-    color: #f0f5f9;
+/* Pagina Inicial */
+nav{
+  border-bottom: var(--first-color) 3px solid;
 }
 
-.registro{
+.carousel-indicators {
+    background-color: transparent!important; /* O !important é usado caso o Bootstrap ou outro estilo esteja sobrescrevendo sua configuração */
+  }
+
+  .carousel-indicators button[data-bs-target] {
+    width: 12px !important;
+    height: 12px !important;
+    border-radius: 50% !important;
+    background-color: transparent !important;
+    border: 2px solid var(--first-color) !important;
+    margin: 0 4px !important;
+    opacity: 1 !important;
+  }
+
+  .carousel-indicators button.active {
+    background-color: var(--second-color) !important;
+  }
+
+
+/* Botão de pesquisa da nav bar */
+.btn-custom {
+  border: 5px solid var(--first-color)!important;
+  color: black !important;
+  background-color: transparent !important;
+}
+
+.btn-custom:hover {
+  background-color: #537d5d !important;
+  color: white !important;
+}
+
+
+.d-grid {
+  display: flex;
+  justify-content: center;
+  background: cyan;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Pagina Cadastro */
+/* Variáveis CSS para reutilização */
+
+
+.pagina-cadastro {
+  background: var(--background-color);
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  color: #f0f5f9;
+  display: flex;
+}
+
+.registro {
   background-color: aqua;
 }
-
-
 
 .input-floating {
   position: relative;
