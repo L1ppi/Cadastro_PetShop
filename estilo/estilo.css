@@ -1,51 +1,120 @@
-* {
-  font-family: "DynaPuff", system-ui;
-  background: var(--second-color);
-}
+/* Reset e variáveis */
 :root {
   --first-color: #537d5d;
   --second-color: #73946b;
   --third-color: #9ebc8a;
   --fourth-color: #d2d0a0;
+  --text-color: #3a5240;
   --error-color: red;
 }
-/* Pagina Inicial */
-nav{
-  border-bottom: var(--first-color) 3px solid;
+* {
+  font-family: "DynaPuff", system-ui;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.body-inicial {
+  height: 100%;
+  width: 100%;
+  background-color: var(--second-color);
 }
 
+
+
+
+
+/* Input de pesquisa */
+.input-custom {
+  background: transparent !important;
+  border: 2px solid var(--first-color) !important;
+ color: var(--text-color)!important;
+}
+.input-custom:focus {
+  border-color: var(--first-color) !important;
+  box-shadow: none !important;
+  outline: none !important;
+}
+
+/* Estiliza o "x" de limpar no Chrome, Edge e Opera */
+.input-custom::-webkit-search-cancel-button {
+  filter: invert(48%) sepia(10%) saturate(600%) hue-rotate(66deg) brightness(0.95);
+  /* Ajuste o filtro para combinar com var(--second-color) */
+}
+
+.btn-pesquisa {
+  border: 2px solid var(--first-color) !important;
+  color: var(--text-color)!important;
+  background: var(--fourth-color) !important;
+  font-weight: bold;
+}
+.btn-pesquisa:hover {
+  background: var(--first-color) !important;
+  color: var(--text-color)!important;
+}
+
+
+
+/* Carrossel de imagens */
+#carouselExampleCombined,
+.carousel-inner,
+
+.carousel-item,
+.carousel-item img {
+  display: block;
+  width: 100vw;
+  height: auto;
+  object-fit: cover;
+}
+#carouselExampleCombined {
+  max-height: 100%;
+}
+.carousel-inner {
+  position: relative;
+}
+
+/* Indicadores do carrossel */
 .carousel-indicators {
-    background-color: transparent!important; /* O !important é usado caso o Bootstrap ou outro estilo esteja sobrescrevendo sua configuração */
-  }
-
-  .carousel-indicators button[data-bs-target] {
-    width: 12px !important;
-    height: 12px !important;
-    border-radius: 50% !important;
-    background-color: transparent !important;
-    border: 2px solid var(--first-color) !important;
-    margin: 0 4px !important;
-    opacity: 1 !important;
-  }
-
-  .carousel-indicators button.active {
-    background-color: var(--second-color) !important;
-  }
-
-
-/* Botão de pesquisa da nav bar */
-.btn-custom {
-  border: 5px solid var(--first-color)!important;
-  color: black !important;
   background-color: transparent !important;
+  bottom: 10px !important;
+}
+.carousel-indicators button[data-bs-target] {
+  width: 12px !important;
+  height: 12px !important;
+  border-radius: 50% !important;
+  background-color: transparent !important;
+  border: 2px solid var(--first-color) !important;
+  margin: 0 4px !important;
+  opacity: 1 !important;
+}
+.carousel-indicators button.active {
+  background-color: var(--second-color) !important;
 }
 
-.btn-custom:hover {
-  background-color: #537d5d !important;
-  color: white !important;
+/* Controles do carrossel */
+.carousel-control-prev,
+.carousel-control-next {
+  top: 50% !important;
+  transform: translateY(-50%);
+  bottom: unset;
+  height: auto !important;
+}
+.carousel-control-next-icon,
+.carousel-control-prev-icon {
+  background: transparent;
+  filter: invert(34%) sepia(13%) saturate(617%) hue-rotate(66deg) brightness(0.95);
+  /* Ajuste o filtro para combinar com var(--first-color) */
+}
+
+.lead {
+  color: var(--text-color);
+  font-size: 2.5rem!important;
+  font-weight: bold;
 }
 
 
+
+
+/* Botões "Entrar" e "Fazer Login" */
 .d-grid {
   display: flex;
   justify-content: center;
@@ -61,43 +130,18 @@ nav{
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* Pagina Cadastro */
-/* Variáveis CSS para reutilização */
-
-
+/* ------------------Página de cadastro-------------------------- */
 .pagina-cadastro {
-  background: var(--background-color);
+  background: var(--second-color);
   margin: 0;
   padding: 0;
   height: 100vh;
   color: #f0f5f9;
   display: flex;
 }
-
 .registro {
   background-color: aqua;
 }
-
 .input-floating {
   position: relative;
   width: 100%;
@@ -105,7 +149,7 @@ nav{
   display: flex;
   flex-direction: column;
   justify-content: center;
-  /* Garante que ocupe metade da linha como os outros campos */
   flex: 1 1 calc(50% - 20px);
   box-sizing: border-box;
 }
+

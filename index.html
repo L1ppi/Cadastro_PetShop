@@ -34,57 +34,58 @@
 
 <body class="body-inicial">
     <!-- Barra de navegação da pagina -->
-    <nav class="navbar navbar-expand-lg">
+    <nav class="navbar navbar-expand-lg  py-3">
         <div class="container-fluid">
             <!-- Imagem Logo completa -->
-            <a class="navbar-brand" href="#">
-                <img src="./img/Logo-completa-petshop.svg" alt="Logo Petshop" class="img-fluid" style="max-height: 50px;">
+            <a class="navbar-brand d-flex align-items-center" href="#">
+                <img src="./img/Logo-completa-petshop.svg" alt="Logo Petshop" class="img-fluid"
+                    style="max-height: 50px;">
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                 data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
                 aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav me-auto mb-lg-0">
 
-                    <li class="nav-item">
+            <!-- Itens do menu -->
+
+            <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
+                <ul class="navbar-nav align-items-center me-3">
+
+                    <li class="nav-item mx-2">
                         <a class="nav-link active" aria-current="page" href="#">Inicio</a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Produtos</a>
+                    <li class="nav-item mx-2">
+                        <a class="nav-link active"  href="#">Produtos</a>
                     </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                    <li class="nav-item dropdown mx-2">
+                        <a class="nav-link active dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
                             aria-expanded="false">
                             Contato
                         </a>
-                        <ul class="dropdown-menu">
+                        <ul class="dropdown-menu ">
                             <li><a class="dropdown-item" href="#">Contato-a</a></li>
                             <li><a class="dropdown-item" href="#">Contato-b</a></li>
-                        
+
                         </ul>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link disabled" aria-disabled="true">Disabled</a>
-                    </li>
-                </ul>
-                <form class="d-flex" role="search">
-                    <input class="form-control me-3" type="search" placeholder="Pesquisa" aria-label="Search" />
-                    <button type="submit" class="btn btn-custom">Pesquisa</button>
-                </form>
+
+                    <!-- Fim do Itens do menu -->
+                    <!-- Barra de busca e botão -->
+                    <form class="d-flex" role="search">
+                        <input class="form-control input-custom" type="search" placeholder="Buscar..." aria-label="Buscar">
+                        <button class="btn btn-outline-success me-2 btn-pesquisa" type="submit">Pesquisa</button>
+                    </form>
             </div>
         </div>
     </nav>
     <!-- Fim da barra de navegação -->
 
 
-   
-
 
 
     <!-- Carrossel de imagens -->
-    <div id="carouselExampleCombined" class="carousel slide carousel-fade  m-0" data-bs-ride="carousel">
+    <div id="carouselExampleCombined" class="carousel slide carousel-fade m-0 p-0" data-bs-ride="carousel">
         <!-- Indicadores -->
         <div class="carousel-indicators">
             <button type="button" data-bs-target="#carouselExampleCombined" data-bs-slide-to="0" class="active"
@@ -101,7 +102,7 @@
 
         <!-- Slides -->
         <div class="carousel-inner">
-            <div class="carousel-item active " data-bs-interval="5000">
+            <div class="carousel-item active w-100" data-bs-interval="5000">
                 <img src="./img/Inicial/Carrossel/1.svg" class="d-block w-100" alt="Cachorro">
             </div>
             <div class="carousel-item" data-bs-interval="5000">
@@ -118,7 +119,7 @@
             </div>
         </div>
 
-        <!-- Controles -->
+        <!-- Controles (corrigido) -->
         <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCombined"
             data-bs-slide="prev">
             <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -132,19 +133,16 @@
     </div>
 
 
-     <!-- Titulo da pagina -->
+
+    <!-- Titulo da pagina -->
     <div class="text-center">
-    <h1 class="lead">
-        Cuidando do seu melhor amigo<br>
-         com carinho e dedicação
-    </h1>
-</div>
+        <h1 class="lead">
+            Cuidando do seu melhor amigo<br>
+            com carinho e dedicação
+        </h1>
+    </div>
 
     <!-- Fim do Carrossel de Imagens -->
-    <div class="d-grid gap-2 d-md-block">
-<button class="btn btn-outline-success" type="button">Entrar</button>
-<button class="btn btn-outline-success" type="button">Fazer Login</button>
-</div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-j1CDi7MgGQ12Z7Qab0qlWQ/Qqz24Gc6BM0thvEMVjHnfYGF0rmFCozFSxQBxwHKO"
         crossorigin="anonymous"></script>
