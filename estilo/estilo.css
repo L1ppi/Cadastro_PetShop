@@ -1,0 +1,166 @@
+/* --------Vale pra tudo------------------*/
+:root {
+  --first-color:#f0f8f6;
+  --second-color:#f9fa99;
+  --third-color:#e1b055;
+  --fourth-color:#aabb70;
+  --fifth-color:#7c945a;
+  --sixth-color:#345731;
+  --error-color: #ff1100;
+}
+* {
+  font-family: "Bree Serif", serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+/* ---------------------------------------- */
+
+
+/* -------- Página de index -------- */
+.body-inicial {
+  height: 100%;
+  width: 100%;
+  background-color: var(--fifth-color);
+}
+
+/* -------- Navbar -------- */
+.navbar {
+  background: var(--sixth-color);
+}
+.navbar-nav .nav-link {
+  color: var(--second-color) !important;
+}
+.dropdown-menu {
+  background-color: var(--sixth-color) !important;
+}
+.dropdown-item {
+  color: var(--second-color) !important;
+}
+.dropdown-item:hover {
+  background-color: var(--fifth-color) !important;
+  color: var(--first-color) !important;
+}
+
+/* -------- Input de pesquisa -------- */
+.input-custom {
+  background: transparent !important;
+  border: none !important;
+  border-bottom: 1px solid var(--sixth-color) !important;
+  color: var(--second-color) !important;
+  padding: 0.5rem 0 !important;
+  transition: all 0.3s ease !important;
+  border-radius: 0% !important;
+  max-width: 150px;
+}
+.input-custom:focus {
+  box-shadow: none !important;
+  outline: none !important;
+  border-bottom-color: var(--second-color) !important;
+}
+.input-custom::placeholder {
+  color: var(--second-color) !important;
+  padding: 0px 10px;
+  border-left: 1px solid var(--second-color) !important;
+}
+.btn-pesquisa {
+  border: none !important;
+  color: var(--first-color) !important;
+  background: var(--third-color) !important;
+  font-weight: bold;
+}
+.btn-pesquisa:hover {
+  background: var(--fourth-color) !important;
+  color: var(--sixth-color) !important;
+}
+
+/* -------- Carrossel de imagens -------- */
+#carouselExampleCombined {
+  margin: 0 !important;
+  padding: 0 !important;
+  width: 100vw !important;
+  position: relative !important;
+  left: 50% !important;
+  right: 50% !important;
+  margin-left: -50vw !important;
+  margin-right: -50vw !important;
+}
+.carousel-inner {
+  width: 100% !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+.carousel-item {
+  width: 100vw !important;
+  height: 60vh !important; /* Define uma altura fixa */
+}
+.carousel-item img {
+  width: 100% !important;
+  height: 100% !important; /* Ajusta para altura total */
+  object-fit: cover !important;
+  display: block !important;
+}
+
+/* -------- Indicadores do carrossel -------- */
+.carousel-indicators {
+  background-color: transparent !important;
+  bottom: -10px !important;
+}
+.carousel-indicators button[data-bs-target] {
+  width: 12px !important;
+  height: 12px !important;
+  border-radius: 50% !important;
+  background-color: var(--sixth-color) !important;
+  margin: 0 4px !important;
+  opacity: 1 !important;
+  border: 2px solid transparent !important;
+  box-sizing: border-box !important;
+}
+.carousel-indicators button.active {
+  background-color: var(--fourth-color) !important;
+  border: 2px solid var(--sixth-color) !important;
+}
+
+/* -------- Controles do carrossel -------- */
+.carousel-control-prev,
+.carousel-control-next {
+  top: 50% !important;
+  transform: translateY(-50%);
+  bottom: unset;
+  height: auto !important;
+}
+.carousel-control-next-icon,
+.carousel-control-prev-icon {
+  background: transparent;
+  filter: invert(34%) sepia(13%) saturate(617%) hue-rotate(66deg) brightness(0.95);
+}
+
+/* -------- Texto principal -------- */
+.lead {
+  color: var(--sixth-color) !important;
+  font-size: 3rem !important;
+  font-style: bold !important;
+}
+
+/* -------- Botões iniciais -------- */
+.botton-inicial {
+  background-color: var(--third-color) !important;
+  color: var(--first-color) !important;
+  border-color: transparent !important;
+  width: 200px;
+  font-size: 1.5rem !important;
+  font-weight: bold !important;
+  transition: all 0.3s ease !important;
+  margin-top: 2rem !important;
+  margin-right: 1rem !important;
+}
+.botton-inicial:hover {
+  background-color: var(--third-color) !important;
+  color: var(--first-color) !important;
+  border-color: transparent !important;
+  transform: scale(1.05);
+}
+/* ----------------Fim Pagina Index--------------------- */
+
+
+/* ------------------Página de cadastro-------------------------- */

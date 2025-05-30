@@ -1,0 +1,164 @@
+* {
+    font-family: sans-serif;
+    box-sizing: border-box;
+}
+
+body {
+    background-image: url("../img/Background.png");
+    background-size: cover;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    color: #f0f5f9;
+}
+
+.registro {
+    background: rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(4px);
+    border: 2px solid #c9d6df;
+    border-radius: 10px;
+    padding: 40px;
+    width: 100%;
+    max-width: 600px;
+    box-shadow: 9px 7px 7px -1px rgba(0, 0, 0, 0.35);
+}
+
+.cadastro-cliente {
+    width: 100%;
+    height: 100%;
+    background: transparent;
+}
+
+.titulo {
+    font-size: 30px;
+    margin-bottom: 10px;
+    color: #1e2022;
+    font-weight: bold;
+    text-align: start;
+    border-bottom: solid 1px #c9d6df;
+}
+
+.subtitulo {
+    font-size: 16px;
+    margin-bottom: 20px;
+    font-weight: bold;
+    text-align: start;
+}
+
+.inputs form {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.campo {
+    flex: 1 1 calc(50% - 20px);
+    display: flex;
+    flex-direction: column;
+}
+
+.inputs input {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-bottom: 1px solid #c9d6df;
+    background: transparent;
+    color: #c9d6df;
+    font-size: 14px;
+}
+
+.inputs input::placeholder {
+  color: #f0f5f9;
+  opacity: 0.7;
+}
+
+.inputs input:focus {
+  outline: none;
+  border-bottom: 2px solid #c9d6df;
+}
+
+.inputs button {
+  flex: 1 1 100%;
+  padding: 14px;
+  background: #1e2022;
+  color: #c9d6df;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  margin-top: 10px;
+  box-shadow: 9px 7px 7px -1px rgba(0, 0, 0, 0.35);
+  transition: background 0.3s;
+}
+
+.inputs button:hover {
+  background: #282b2e;
+}
+
+
+
+
+
+
+.input-floating {
+  position: relative;
+  width: 100%;
+  margin-top: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  /* Garante que ocupe metade da linha como os outros campos */
+  flex: 1 1 calc(50% - 20px);
+  box-sizing: border-box;
+}
+
+.input-floating input {
+  width: 100%;
+  padding: 14px 10px 10px 10px; /* padding igual dos dois lados */
+  border: none;
+  border-bottom: 1px solid #c9d6df;
+  background: transparent;
+  color: #c9d6df;
+  font-size: 14px;
+  box-sizing: border-box;
+}
+
+.input-floating input:focus {
+  outline: none;
+  border-bottom: 2px solid #c9d6df;
+}
+
+.input-floating label {
+  position: absolute;
+  top: 14px;
+  left: 10px;
+  font-size: 14px;
+  color: #c9d6df;
+  pointer-events: none;
+  transition: all 0.2s ease-out;
+  background: transparent;
+  padding: 0 4px;
+}
+
+.input-floating input:focus + label,
+.input-floating input:not(:placeholder-shown) + label,
+.input-floating input:valid + label {
+  top: -8px;
+  left: 5px;
+  font-size: 12px;
+  border-bottom: solid 1px #c9d6df;
+  padding: 0 4px;
+}
+
+.erro {
+  color: red;
+  margin-left: 4px;
+  font-weight: bold;
+  display: none; /* mostrar somente quando houver erro */
+}
