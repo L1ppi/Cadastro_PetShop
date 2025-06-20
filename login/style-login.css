@@ -1,0 +1,139 @@
+:root {
+  --first-color:#f0f8f6;
+  --second-color:#f9fa99;
+  --third-color:#e1b055;
+  --fourth-color:#aabb70;
+  --fifth-color:#7c945a;
+  --sixth-color:#345731;
+  --error-color: #ff1100;
+}
+* {
+  font-family: "Bree Serif", serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+/* ---------------------------------------- */
+
+
+/* -------- Página de index -------- */
+.body-inicial {
+  height: 100%;
+  width: 100%;
+  background-color: var(--fifth-color);
+}
+
+/* -------- Navbar -------- */
+.navbar {
+  background: var(--sixth-color);
+}
+.navbar-nav .nav-link {
+  color: var(--second-color) !important;
+}
+.dropdown-menu {
+  background-color: var(--sixth-color) !important;
+}
+.dropdown-item {
+  color: var(--second-color) !important;
+}
+.dropdown-item:hover {
+  background-color: var(--fifth-color) !important;
+  color: var(--first-color) !important;
+}
+
+.registro {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--first-color);
+  padding: 40px 20px;
+  min-height: 100vh;
+}
+
+.cadastro-cliente {
+  background-color: #fff;
+  border: 2px solid var(--fourth-color);
+  border-radius: 16px;
+  padding: 30px 40px;
+  max-width: 700px;
+  width: 100%;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.cadastro-cliente img {
+  align-self: center;
+  margin-bottom: 10px;
+}
+
+.titulo {
+  font-size: 1.8rem;
+  color: var(--sixth-color);
+  text-align: center;
+  font-weight: bold;
+}
+
+.subtitulo {
+  text-align: center;
+  font-size: 1rem;
+  color: var(--fifth-color);
+  margin-bottom: 20px;
+}
+
+.inputs form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.campo {
+  display: flex;
+  flex-direction: column;
+}
+
+.input-floating label {
+  color: var(--sixth-color);
+  font-weight: bold;
+  margin-bottom: 4px;
+  font-size: 0.95rem;
+}
+
+.input-floating input {
+  border: none;
+  border-bottom: 1.5px solid var(--sixth-color);
+  padding: 8px 4px;
+  font-size: 1rem;
+  background-color: transparent;
+  color: var(--sixth-color);
+  transition: border-color 0.3s;
+}
+
+.input-floating input:focus {
+  outline: none;
+  border-bottom-color: var(--third-color);
+}
+
+button[type="submit"] {
+  margin-top: 20px;
+  background-color: var(--third-color);
+  color: var(--first-color);
+  font-weight: bold;
+  border: none;
+  padding: 12px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button[type="submit"]:hover {
+  background-color: var(--fourth-color);
+  color: var(--sixth-color);
+}
+
+.erro {
+  color: var(--error-color);
+  font-weight: bold;
+  margin-left: 4px;
+}
